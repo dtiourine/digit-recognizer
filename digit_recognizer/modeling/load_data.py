@@ -6,29 +6,15 @@ import torch
 import numpy as np
 from PIL import Image
 
-
 class DigitsDataset(Dataset):
     def __init__(self, csv_file, transform=None):
         self.data = pd.read_csv(csv_file)
         self.transform = transform
 
-        # df = pd.read_csv(csv_file)
-        # self.images = df.drop('label', axis=1).values
-        # self.labels = df['label'].values
-        # self.transform = transform
-
     def __len__(self):
         return len(self.data)
 
     def __getitem__(self, idx):
-        # image = self.images[idx].reshape(28, 28).astype(np.float32)
-        # image = torch.from_numpy(image)
-        #
-        # if self.transform:
-        #     image = self.transform(image)
-        #
-        # label = self.labels[idx]
-        # return image, label
         img = self.data.iloc[idx, 1:].values.astype(np.uint8).reshape(28, 28)
         label = self.data.iloc[idx, 0]
 

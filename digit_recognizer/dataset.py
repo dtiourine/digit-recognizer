@@ -5,7 +5,6 @@ from loguru import logger
 from tqdm import tqdm
 
 import pandas as pd
-from torch.utils.data import Dataset
 import kaggle
 
 from digit_recognizer.config import PROCESSED_DATA_DIR, RAW_DATA_DIR
@@ -47,6 +46,9 @@ def process_data(raw_data_path, processed_data_path):
     """
     Process the raw data and split into train and validation sets.
     """
+    if not os.path.exists(processed_data_path):
+        os.mkdir(processed_data_path)
+
     logger.info("Reading CSV file...")
     full_train_df = pd.read_csv(os.path.join(raw_data_path, 'train.csv'))
 
