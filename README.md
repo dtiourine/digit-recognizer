@@ -9,7 +9,6 @@ A convolutional neural network for recognizing digits.
 ## Project Organization
 
 ```
-├── LICENSE            <- Open-source license if one is chosen
 ├── Makefile           <- Makefile with convenience commands like `make data` or `make train`
 ├── README.md          <- The top-level README for developers using this project.
 ├── data
@@ -40,8 +39,7 @@ A convolutional neural network for recognizing digits.
     │
     ├── __init__.py    <- Makes digit_recognizer a Python module
     │
-    ├── data           <- Scripts to download or generate data
-    │   └── make_dataset.py
+    ├── dataset.py           <- Scripts to download or generate data
     │
     ├── features       <- Scripts to turn raw data into features for modeling
     │   └── build_features.py
@@ -51,8 +49,7 @@ A convolutional neural network for recognizing digits.
     │   ├── predict_model.py
     │   └── train_model.py
     │
-    └── visualization  <- Scripts to create exploratory and results oriented visualizations
-        └── visualize.py
+    └── visualize.py  <- Scripts to visualize the data
 ```
 
 --------
