@@ -29,10 +29,7 @@ A convolutional neural network for recognizing digits.
 ├── pyproject.toml     <- Project configuration file with package metadata for digit_recognizer
 │                         and configuration for tools like black
 │
-├── references         <- Data dictionaries, manuals, and all other explanatory materials.
 │
-├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-│   └── figures        <- Generated graphics and figures to be used in reporting
 │
 ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
 │                         generated with `pip freeze > requirements.txt`
