@@ -1,7 +1,9 @@
+--find-links https://download.pytorch.org/whl/torch_stable.html
+
 kaggle==1.6.14
 loguru==0.7.2
 matplotlib==3.9.1
-numpy==2.0.1
+numpy==1.26.4
 pandas==2.2.2
 Pillow==10.4.0
 python-dotenv==1.0.1

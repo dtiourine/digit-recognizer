@@ -10,15 +10,11 @@ PYTHON_INTERPRETER = python
 # COMMANDS                                                                      #
 #################################################################################
 
-
 ## Install Python Dependencies
 .PHONY: requirements
 requirements:
 	$(PYTHON_INTERPRETER) -m pip install -U pip
 	$(PYTHON_INTERPRETER) -m pip install -r requirements.txt
-	
-
-
 
 ## Delete all compiled Python files
 .PHONY: clean
@@ -38,30 +34,30 @@ lint:
 format:
 	black --config pyproject.toml digit_recognizer
 
-
-
-
 ## Set up python interpreter environment
 .PHONY: create_environment
 create_environment:
-	
 	conda create --name $(PROJECT_NAME) python=$(PYTHON_VERSION) -y
-	
 	@echo ">>> conda env created. Activate with:\nconda activate $(PROJECT_NAME)"
-	
-
-
 
 #################################################################################
 # PROJECT RULES                                                                 #
 #################################################################################
-
 
 ## Make Dataset
 .PHONY: data
 data: requirements
 	$(PYTHON_INTERPRETER) digit_recognizer/dataset.py
 
+## Train the model
+.PHONY: train
+train: requirements
+	$(PYTHON_INTERPRETER) digit_recognizer/modeling/train.py
+
+## Make predictions using the trained model
+.PHONY: predict
+predict: requirements
+	$(PYTHON_INTERPRETER) digit_recognizer/modeling/predict.py
 
 #################################################################################
 # Self Documenting Commands                                                     #
@@ -79,4 +75,4 @@ endef
 export PRINT_HELP_PYSCRIPT
 
 help:
-	@$(PYTHON_INTERPRETER) -c "${PRINT_HELP_PYSCRIPT}" < $(MAKEFILE_LIST)
+	@$(PYTHON_INTERPRETER) -c "$(PRINT_HELP_PYSCRIPT)" < $(MAKEFILE_LIST)
