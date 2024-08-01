@@ -6,7 +6,7 @@
 
 ## Project Description
 
-This project implements a convolutional neural network (CNN) for recognizing handwritten digits - a project that is like the "Hello World" of machine learning. Using the MNIST dataset, I've trained a model that achieves 97% accuracy on Kaggle's test set. 
+This project implements a convolutional neural network (CNN) for recognizing handwritten digits - the "Hello World" of machine learning. Using the MNIST dataset, I've trained a model that achieves 97% accuracy on Kaggle's test set. 
 
 ## Data Source
 
