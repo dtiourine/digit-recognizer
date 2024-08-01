@@ -76,7 +76,7 @@ def predict(model_path,
 
             # Convert predictions and indices to CPU for saving
             preds = preds.cpu().numpy()
-            
+
             ids = range(idx * test_loader.batch_size + 1, idx * test_loader.batch_size + len(preds) + 1)
 
             # Append the predictions to the CSV file
