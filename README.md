@@ -85,8 +85,6 @@ make predict
 ├── pyproject.toml     <- Project configuration file with package metadata for digit_recognizer
 │                         and configuration for tools like black
 │
-│
-│
 ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
 │                         generated with `pip freeze > requirements.txt`
 │
