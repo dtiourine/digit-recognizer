@@ -6,7 +6,7 @@
 
 ## Project Description
 
-This project implements a convolutional neural network (CNN) for recognizing handwritten digits. Using the MNIST dataset, I've trained a model that achieves 97% accuracy on Kaggle's test set. Building a model on the MNIST dataset is like the "Hello World" of machine learning.
+This project implements a convolutional neural network (CNN) for recognizing handwritten digits - the "Hello World" of machine learning. Using the MNIST dataset, I've trained a model that achieves 97% accuracy on Kaggle's test set. 
 
 ## Data Source
 
@@ -94,19 +94,19 @@ make predict
 │
 └── digit_recognizer                <- Source code for use in this project.
     │
-    ├── __init__.py    <- Makes digit_recognizer a Python module
+    ├── __init__.py  <- Makes digit_recognizer a Python module
     │
-    ├── dataset.py           <- Scripts to download or generate data
+    ├── dataset.py  <- Scripts to download the data from Kaggle
     │
-    ├── features       <- Scripts to turn raw data into features for modeling
-    │   └── build_features.py
     │
-    ├── models         <- Scripts to train models and then use trained models to make
-    │   │                 predictions
-    │   ├── predict_model.py
-    │   └── train_model.py
-    │
-    └── visualize.py  <- Scripts to visualize the data
+    ├── modeling  <- Scripts to train models and then use trained models to make predictions
+    │   │                 
+    │   ├── predict.py  <- Script to train 
+    │   ├── train.py  <- Script to predict
+    │   ├── load_data.py  <- Includes a custom PyTorch dataset and functions for creating data loaders.
+    │   └── architecture.py  <- Includes PyTorch model architecture 
+    │ 
+    └── visualize.py  <- Script to visualize the data
 ```
 
 ## Results
