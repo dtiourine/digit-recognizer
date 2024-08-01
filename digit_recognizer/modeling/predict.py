@@ -62,7 +62,7 @@ def predict(model_path,
     model.eval()
 
     with open(predictions_file_path, 'w') as f:
-        f.write("Id,Label\n")
+        f.write("ImageId,Label\n")
 
     with torch.no_grad():  # Disable gradient computation for inference
         for idx, images in enumerate(tqdm(test_loader)):
@@ -76,10 +76,11 @@ def predict(model_path,
 
             # Convert predictions and indices to CPU for saving
             preds = preds.cpu().numpy()
-            ids = range(idx * test_loader.batch_size, idx * test_loader.batch_size + len(preds))
+            
+            ids = range(idx * test_loader.batch_size + 1, idx * test_loader.batch_size + len(preds) + 1)
 
             # Append the predictions to the CSV file
-            df = pd.DataFrame({"Id": ids, "Label": preds})
+            df = pd.DataFrame({"ImageId": ids, "Label": preds})
             df.to_csv(predictions_file_path, mode='a', header=False, index=False)
 
     logger.success("Done!")
