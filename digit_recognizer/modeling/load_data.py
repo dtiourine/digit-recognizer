@@ -49,4 +49,4 @@ def load_data(transform, data_path=PROCESSED_DATA_DIR, batch_size=BATCH_SIZE):
     train_loader = DataLoader(train_set, batch_size=batch_size, shuffle=True)
     val_loader = DataLoader(val_set, batch_size=batch_size, shuffle=True)
 
-    return train_loader, val_loader
+    return train_set, val_set, train_loader, val_loader

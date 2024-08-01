@@ -91,7 +91,7 @@ def main(model_path: Path = MODELS_DIR / "model.pth"):
         transforms.ToTensor(),
         transforms.Normalize((0.1307,), (0.3081,))  # MNIST mean and std
     ])
-    train_loader, val_loader = load_data(transform=transform)
+    _, _, train_loader, val_loader = load_data(transform=transform)
 
     if not model_path.exists():
         if model_path.is_dir():
