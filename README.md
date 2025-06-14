@@ -8,7 +8,9 @@
 
 This project implements a convolutional neural network (CNN) for recognizing handwritten digits - the "Hello World" of machine learning. Using the MNIST dataset, I've trained a model that achieves 97% accuracy on Kaggle's test set. 
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/MNIST_dataset_example.png" alt="Alt text" width="500">
+<div align="center">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/MNIST_dataset_example.png" alt="Alt text" width="500">
+</div>
 
 ## Data Source
 
