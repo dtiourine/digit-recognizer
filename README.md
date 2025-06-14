@@ -111,12 +111,6 @@ make predict
 
 The model achieved 97% accuracy on the Kaggle test set, demonstrating strong performance in digit recognition.
 
-## Future Work
-
-- Experiment with different CNN architectures
-- Implement data augmentation techniques
-- Try transfer learning with pre-trained models
-
 ## Acknowledgments
 
 - Kaggle for providing the dataset
