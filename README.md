@@ -8,6 +8,8 @@
 
 This project implements a convolutional neural network (CNN) for recognizing handwritten digits - the "Hello World" of machine learning. Using the MNIST dataset, I've trained a model that achieves 97% accuracy on Kaggle's test set. 
 
+<img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/MNIST_dataset_example.png" alt="Alt text" width="500">
+
 ## Data Source
 
 The data for this project comes from the [Digit Recognizer competition on Kaggle](https://www.kaggle.com/c/digit-recognizer). It's a classic computer vision dataset that contains tens of thousands of handwritten images. Each image is 28 pixels in height and 28 pixels in width, for a total of 784 pixels in total. Each pixel has a single pixel-value associated with it, indicating the lightness or darkness of that pixel, with higher numbers meaning darker. This pixel-value is an integer between 0 and 255, inclusive.
