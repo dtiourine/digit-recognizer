@@ -14,7 +14,11 @@ This project implements a convolutional neural network (CNN) for recognizing han
 
 ## Data Source
 
-The data for this project comes from the [Digit Recognizer competition on Kaggle](https://www.kaggle.com/c/digit-recognizer). It's a classic computer vision dataset that contains tens of thousands of handwritten images. Each image is 28 pixels in height and 28 pixels in width, for a total of 784 pixels in total. Each pixel has a single pixel-value associated with it, indicating the lightness or darkness of that pixel, with higher numbers meaning darker. This pixel-value is an integer between 0 and 255, inclusive.
+The data for this project comes from the [Digit Recognizer competition on Kaggle](https://www.kaggle.com/c/digit-recognizer). 
+
+It's a classic computer vision dataset that contains tens of thousands of handwritten images. Each image is 28 pixels in height and 28 pixels in width, for a total of 784 pixels in total. 
+
+Each pixel has a single pixel-value associated with it, indicating the lightness or darkness of that pixel, with higher numbers meaning darker. This pixel-value is an integer between 0 and 255, inclusive.
 
 ## Getting Started
 
